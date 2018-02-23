@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="zenbox.pl - sft">
+    <serverData>
+      <paths name="travelator">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="http://192.168.0.80:3000/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="zenbox.pl - sft">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$/platforms/browser/www" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>Simple Fretboard Trainer</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.md.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- App root element -->
+<div id="app">
+
+    <!-- Left panel -->
+    <div class="panel panel-left" style="background-color: #1E88E5; color: #fff;">
+        <div class="list inset">
+            <ul>
+                <li>
+                    <a href="/tips/" class="item-link list-button panel-close">Tips</a>
+                </li>
+                <li>
+                    <a href="/about/" class="item-link list-button panel-close">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Statusbar overlay -->
+    <div class="statusbar"></div>
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+            <!-- Top Navbar -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="link panel-open"><i class="material-icons">menu</i></a>
+                    </div>
+                    <div class="title">Home</div>
+                </div>
+            </div>
+            <!-- Scrollable page content -->
+            <div class="page-content" style="text-align: center;">
+                <div class="block">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row main-tiles">
+                                <div style="background-color: #2196f3;" class="card col-45">
+                                    <div id="string" class="card-content card-content-padding">??</div>
+                                </div>
+                                <div style="background-color: #2196f3;" class="card col-45">
+                                    <div id="sound" class="card-content card-content-padding">??</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="ca"></div>
+                                    <!--<button class="col-20 button button-big button-fill button-raised"></button>-->
+                                    <button id='mainToggle' class="col-60 button button-big button-fill button-raised" style="margin: 20px auto;">Start</button>
+                                    <!--<button class="col-20 button button-big button-fill button-raised"></button>-->
+                            </div>
+                        </div>
+                        <!--<div class="col">50% (.col)-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-33">33% (.col-33)</div>-->
+                                <!--<div class="col-66">66% (.col-66)</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+
+                    <img width="80%" src="Logo-big.png">
+                </div>
+                <!-- Link to another page -->
+
+            </div>
+
+
+            <!--&lt;!&ndash; Toolbar &ndash;&gt;-->
+            <!--<div class="toolbar">-->
+                <!--<div class="toolbar-inner">-->
+                    <!--&lt;!&ndash; Toolbar links &ndash;&gt;-->
+                    <!--<a href="#" class="link">Link 1</a>-->
+                    <!--<a href="#" class="link">Link 2</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+
+
+    <!--&lt;!&ndash; Status bar overlay for full screen mode (PhoneGap) &ndash;&gt;-->
+    <!--<div class="statusbar-overlay"></div>-->
+
+    <!--&lt;!&ndash; Panels overlay&ndash;&gt;-->
+    <!--<div class="panel-overlay"></div>-->
+    <!--&lt;!&ndash; Left panel with reveal effect&ndash;&gt;-->
+    <!--<div class="panel panel-left panel-reveal">-->
+        <!--<div class="content-block">-->
+            <!--<p>Menu</p>-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; Views &ndash;&gt;-->
+    <!--<div class="views">-->
+        <!--&lt;!&ndash; Your main view, should have "view-main" class &ndash;&gt;-->
+        <!--<div class="view view-main">-->
+            <!--&lt;!&ndash; Top Navbar&ndash;&gt;-->
+            <!--<div class="navbar">-->
+                <!--<div class="navbar-inner">-->
+                    <!--&lt;!&ndash; We need cool sliding animation on title element, so we have additional "sliding" class &ndash;&gt;-->
+                    <!--<div class="center sliding">Simple Fretboard Trainer</div>-->
+                    <!--<div class="right">-->
+                        <!--&lt;!&ndash;-->
+                          <!--Right link contains only icon - additional "icon-only" class-->
+                          <!--Additional "open-panel" class tells app to open panel when we click on this link-->
+                        <!--&ndash;&gt;-->
+                        <!--<a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes&ndash;&gt;-->
+            <!--<div class="pages navbar-through toolbar-through">-->
+                <!--&lt;!&ndash; Page, "data-page" contains page name &ndash;&gt;-->
+                <!--<div data-page="index" class="page">-->
+                    <!--&lt;!&ndash; Scrollable page content &ndash;&gt;-->
+                    <!--<div class="page-content">-->
+                        <!--<div class="content-block">-->
+                            <!--<p>Page content goes here</p>-->
+                            <!--&lt;!&ndash; Link to another page &ndash;&gt;-->
+                            <!--<a href="about.html">About app</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; Bottom Toolbar&ndash;&gt;-->
+            <!--<div class="toolbar">-->
+                <!--<div class="toolbar-inner">-->
+                    <!--&lt;!&ndash; Toolbar links &ndash;&gt;-->
+                    <!--<a href="#" class="link">Link 1</a>-->
+                    <!--<a href="#" class="link">Link 2</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>
