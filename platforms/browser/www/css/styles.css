@@ -61,16 +61,33 @@ div[class*="col"] {
     font-size: 12px;
 }
 
-.main-tiles div[class*="col"] {
+.main-tiles div.card {
+/*.main-tiles div {*/
     /*border:  1px solid #FFFFFF;*/
-    border-radius: 10px;
-    font-size: 48px;
+    border-radius: 50%;
+    font-size: 15vw;
     color: #FFFFFF;
     background-color: #2196f3;
     /*background-color: #1976d2;*/
+    width: 60vw;
+    height: 60vw;
+    line-height: 60vw;
+    margin: 8px auto;
+    cursor: pointer;
 }
 
+.main-tiles div span.card-content{
+    line-height: 1;
+    vertical-align: middle;
+    display: inline-block;
+    display: none;
+}
 
+.main-tiles div span#start-text{
+    line-height: 1;
+    vertical-align: middle;
+    display: inline-block;
+}
 .page-content{
     /*background-color: #2196f3;*/
     background-color: #1976d2;

@@ -8,7 +8,7 @@
         Jack Rivers Studio
     </author>
     <content src="index.html" />
-    <icon src="Logo.png" />
+    <icon src="ikona.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
