@@ -658,7 +658,8 @@
             var dimensions = model.dimensionsFunc($fretboardContainer, $fretboardBody, model);
             var fretboardBodyHeight = dimensions.height;
             var fretboardBodyWidth = dimensions.width;
-            var fretWidth = fretboardBodyWidth / (model.numFrets + 1);
+//            var fretWidth = fretboardBodyWidth / (model.numFrets + 1);
+            var fretWidth = fretboardBodyWidth / (model.numFrets);
             var position = {
                 height: dimensions.isDefaultHeight ? "" : "initial",
                 width: dimensions.isDefaultWidth ? "" : "initial"
@@ -970,12 +971,15 @@
         }
 
         function $positionFretLine(fret, $fretLine, fretWidth, shouldBeAnimated) {
-            var fretLeftVal = fret * fretWidth;
+            var fretLeftVal = fret * fretWidth - fretWidth/2;
 
             if (fret === 0) {
                 $fretLine.addClass(firstCssClass);
+                fretLeftVal = 0;
+                fretWidth = fretWidth/2;
             } else if (fret === model.numFrets) {
                 $fretLine.addClass(lastCssClass);
+                fretWidth = fretWidth/2;
             }
 
             var position = {
@@ -1024,7 +1028,11 @@
         }
 
         function $positionNote(fret, $note, fretTopVal, fretWidth, shouldBeAnimated) {
-            var fretLeftVal = fret * fretWidth;
+            var fretLeftVal = fret * fretWidth - fretWidth/2;
+            if (fret === 0) {
+                fretLeftVal = 0;
+                fretWidth = fretWidth/2;
+            }
             var noteLeftVal = fretLeftVal + ((fretWidth / 2) - ($note.outerWidth(true) / 2));
             var noteTopVal = fretTopVal - ($note.outerHeight(true) / 2);
             var position = {
@@ -1054,7 +1062,7 @@
         function $positionSingleNoteCircleForFret($noteCircle, fret, fretboardBodyHeight, fretWidth, shouldBeAnimated) {
             var position = {
                 top: getMiddleNoteCircleTopValue(fretboardBodyHeight) - ($noteCircle.outerHeight(true) / 2),
-                left: (fret * fretWidth) + ((fretWidth / 2) - ($noteCircle.outerWidth(true) / 2))
+                left: (fret * fretWidth - fretWidth/2) + ((fretWidth / 2) - ($noteCircle.outerWidth(true) / 2))
             };
 
             $setPosition($noteCircle, position, shouldBeAnimated);
@@ -1063,11 +1071,11 @@
         function $positionoDoubleNoteCirclesForFret($noteCircles, fret, fretboardBodyHeight, fretWidth, shouldBeAnimated) {
             var position1 = {
                 top: getDoubleNoteCircleTopValue(fretboardBodyHeight, true) - ($noteCircles[0].outerHeight(true) / 2),
-                left: (fret * fretWidth) + ((fretWidth / 2) - ($noteCircles[0].outerWidth(true) / 2))
+                left: (fret * fretWidth - fretWidth/2) + ((fretWidth / 2) - ($noteCircles[0].outerWidth(true) / 2))
             };
             var position2 = {
                 top: getDoubleNoteCircleTopValue(fretboardBodyHeight, false) - ($noteCircles[1].outerHeight(true) / 2),
-                left: (fret * fretWidth) + ((fretWidth / 2) - ($noteCircles[1].outerWidth(true) / 2))
+                left: (fret * fretWidth - fretWidth/2) + ((fretWidth / 2) - ($noteCircles[1].outerWidth(true) / 2))
             };
 
             $setPosition($noteCircles[0], position1, shouldBeAnimated);
