@@ -53,6 +53,9 @@ var emptyStringsNotes = [{
     }]
 }];
 
+var defaultTrainerOptions = [{
+    showFretboard : true
+}];
 
 var app = new Framework7({
     // App root element
@@ -105,6 +108,10 @@ var app = new Framework7({
     on: {
         init: function () {
             console.log('App initialized');
+
+            onDeviceReady();
+
+
         },
         pageInit: function (page) {
             console.log(page.route.name + ' page initialized');
@@ -114,6 +121,8 @@ var app = new Framework7({
                 toggleTraining();
 
             if(page.name == 'home'){
+
+
                 frets = dFrets;
                 showEmptyStringNotes = false;
                 $$('#mainToggle').click(function(e){
@@ -121,14 +130,8 @@ var app = new Framework7({
                 });
                 ToxProgress.create();
 
-                $(".my-fretboard-js").fretboard({
-                    numFrets: 13,
-                    noteLetters: noteLettersSharps,
-                    noteClickingDisabled: true
 
-                });
-                api = $(".my-fretboard-js").data('api');
-
+                loadOptions();
             }
 
             switch(page.route.name) {
@@ -143,6 +146,8 @@ var app = new Framework7({
                         toggleTraining();
                     });
                     ToxProgress.create();
+
+
 
                     $(".my-fretboard-js").fretboard({
                         numFrets: 4,
@@ -167,6 +172,26 @@ var app = new Framework7({
 var mainView = app.views.create('.view-main');
 
 var $$ = Dom7;
+
+var storage;
+
+function onDeviceReady() {
+    storage = window.localStorage;
+    var showFretboard = storage.getItem('showFretboard'); // Pass a key name to get its value.
+    if(showFretboard === null)
+        storage.setItem('showFretboard', true); // Pass a key name and its value to add or update that key.
+//    storage.removeItem(key) // Pass a key name to remove that key from storage.
+//    showFretboard = (showFretboard == 'true');
+}
+
+
+
+
+
+
+
+
+
 
 //Views
 
@@ -198,7 +223,44 @@ var standardTuning = [{
 }];
 
 
+function loadOptions(){
 
+    var options = {
+        showFretboard: storage.getItem('showFretboard'),
+        lastName: 'Doe'
+    };
+
+    var template = $$('#trainer-options').html();
+    var compiledTemplate = Template7.compile(template);
+    var html = compiledTemplate(options);
+
+    $$('#trainer-options-container').html(html);
+
+    onShowFretboardChange(options.showFretboard);
+    $$('input[name="show-fretboard"]').on('change', function () {
+        onShowFretboardChange(this.checked);
+    });
+
+}
+
+function onShowFretboardChange(show){
+    if(show == "true" || show == true){
+        $$('#fretboard-container').show();
+        storage.setItem('showFretboard', true);
+        if(!$(".my-fretboard-js").children().length){
+            $(".my-fretboard-js").fretboard({
+                numFrets: 13,
+                noteLetters: noteLettersSharps,
+                noteClickingDisabled: true
+            });
+            api = $(".my-fretboard-js").data('api');
+        }
+    } else {
+        $$('#fretboard-container').hide();
+        storage.setItem('showFretboard', false);
+    }
+
+}
 function toggleTraining(){
 
     training = !training;
@@ -264,3 +326,4 @@ function lottery(){
 
 
 
+Template7.registerHelper('if_compare', function (a, operator, b, options) { var match = false; if ( (operator === '==' && a == b) || (operator === '===' && a === b) || (operator === '!=' && a != b) || (operator === '>' && a > b) || (operator === '<' && a < b) || (operator === '>=' && a >= b) || (operator === '<=' && a <= b) ) { match = true; } if (match) return options.fn(this); else return options.inverse(this); });
