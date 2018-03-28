@@ -43,6 +43,9 @@
     </platform>
 
     <splash src="splash.png" />
+    <preference name="SplashScreenDelay" value="1500" />
+    <preference name="SplashScreenSpinnerColor" value="white" />
+
 
     <preference name="DisallowOverscroll" value="true" />
     <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
