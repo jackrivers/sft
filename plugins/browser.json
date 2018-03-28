@@ -18,6 +18,9 @@
         },
         "cordova-plugin-insomnia": {
             "PACKAGE_NAME": "rocks.guitarlearning.sft"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "rocks.guitarlearning.sft"
         }
     },
     "dependent_plugins": {}

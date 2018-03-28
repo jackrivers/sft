@@ -36,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my-app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="my-app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="333" column="0" selection-start="7947" selection-end="7947" vertical-scroll-proportion="0.805492" vertical-offset="3546" max-vertical-offset="4539">
+            <state line="333" column="0" selection-start="7947" selection-end="7947" vertical-scroll-proportion="-27.076923" vertical-offset="3546" max-vertical-offset="4539">
               <folding>
                 <element signature="e#264#1002#0" expanded="false" />
                 <element signature="e#1345#2257#0" expanded="false" />
@@ -57,13 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="45" selection-start="1456" selection-end="1456" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-              <folding>
-                <marker date="1522253150901" expanded="true" signature="865:985" placeholder="..." />
-              </folding>
+            <state line="43" column="0" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.6988889" vertical-offset="102" max-vertical-offset="1020">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,7 +78,7 @@
       <file leaf-file-name="tox-progress.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/tox-progress.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="9" selection-start="5190" selection-end="5195" vertical-scroll-proportion="0.0" vertical-offset="1075" max-vertical-offset="1938">
+            <state line="101" column="9" selection-start="5190" selection-end="5195" vertical-scroll-proportion="0.0" vertical-offset="1051" max-vertical-offset="1938">
               <folding>
                 <marker date="1521232411194" expanded="false" signature="755:773" placeholder="..." />
                 <marker date="1521232411194" expanded="false" signature="906:930" placeholder="..." />
@@ -93,12 +91,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platforms/browser/css/index.css">
+      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1157" max-vertical-offset="2057">
+            <state line="63" column="22" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1785">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="android_800x480.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/res/screen/android/android_800x480.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -149,9 +154,9 @@
         <option value="$PROJECT_DIR$/www/css/fretboard.css" />
         <option value="$PROJECT_DIR$/www/js/fretboard.js" />
         <option value="$PROJECT_DIR$/www/js/Insomnia.js" />
-        <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/my-app.js" />
+        <option value="$PROJECT_DIR$/config.xml" />
       </list>
     </option>
   </component>
@@ -235,83 +240,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Simple Fretboard Trainer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Simple Fretboard Trainer" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="screen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tutorial" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Simple Fretboard Trainer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Simple Fretboard Trainer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Simple Fretboard Trainer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Simple Fretboard Trainer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Simple Fretboard Trainer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Simple Fretboard Trainer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,8 +282,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Workspace\PhoneGap\Simple Fretboard Trainer\www\pages\tutorial" />
       <recent name="D:\Workspace\PhoneGap\Simple Fretboard Trainer\www" />
+      <recent name="D:\Workspace\PhoneGap\Simple Fretboard Trainer\www\pages\tutorial" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Workspace\PhoneGap\Simple Fretboard Trainer\www\pages" />
@@ -390,7 +327,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08146965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18636848" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -722,11 +659,6 @@
         <state line="1685" column="0" selection-start="27007" selection-end="27007" vertical-scroll-proportion="0.33333334" vertical-offset="28447" max-vertical-offset="64821" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="29" selection-start="2494" selection-end="2500" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1785" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/tutorial/learn_notes.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="499" selection-end="499" vertical-scroll-proportion="0.36956522" vertical-offset="0" max-vertical-offset="799" />
@@ -746,31 +678,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/browser/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2057">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/tutorial/tutorial.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="48" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.0" vertical-offset="365" max-vertical-offset="1836">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/tox-progress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="9" selection-start="5190" selection-end="5195" vertical-scroll-proportion="0.0" vertical-offset="1075" max-vertical-offset="1938">
-          <folding>
-            <marker date="1521232411194" expanded="false" signature="755:773" placeholder="..." />
-            <marker date="1521232411194" expanded="false" signature="906:930" placeholder="..." />
-            <marker date="1521232411194" expanded="false" signature="1246:1270" placeholder="..." />
-            <marker date="1521232411194" expanded="false" signature="1604:1648" placeholder="..." />
-            <marker date="1521232411194" expanded="false" signature="1934:1952" placeholder="..." />
-            <marker date="1521232411194" expanded="false" signature="2252:2258" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -802,15 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="45" selection-start="1456" selection-end="1456" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <folding>
-            <marker date="1522253150901" expanded="true" signature="865:985" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="117" column="26" selection-start="5693" selection-end="5693" vertical-scroll-proportion="-14.0" vertical-offset="1625" max-vertical-offset="2584">
@@ -824,11 +726,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="333" column="0" selection-start="7947" selection-end="7947" vertical-scroll-proportion="0.805492" vertical-offset="3546" max-vertical-offset="4539">
+        <state line="333" column="0" selection-start="7947" selection-end="7947" vertical-scroll-proportion="-27.076923" vertical-offset="3546" max-vertical-offset="4539">
           <folding>
             <element signature="e#264#1002#0" expanded="false" />
             <element signature="e#1345#2257#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/browser/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2057">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/tox-progress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="9" selection-start="5190" selection-end="5195" vertical-scroll-proportion="0.0" vertical-offset="1075" max-vertical-offset="1938">
+          <folding>
+            <marker date="1521232411194" expanded="false" signature="755:773" placeholder="..." />
+            <marker date="1521232411194" expanded="false" signature="906:930" placeholder="..." />
+            <marker date="1521232411194" expanded="false" signature="1246:1270" placeholder="..." />
+            <marker date="1521232411194" expanded="false" signature="1604:1648" placeholder="..." />
+            <marker date="1521232411194" expanded="false" signature="1934:1952" placeholder="..." />
+            <marker date="1521232411194" expanded="false" signature="2252:2258" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="22" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/res/screen/android/android_800x480.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.6988889" vertical-offset="102" max-vertical-offset="1020">
+          <folding />
         </state>
       </provider>
     </entry>
