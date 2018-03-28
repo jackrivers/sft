@@ -130,6 +130,12 @@ var app = new Framework7({
                 });
                 ToxProgress.create();
 
+                $(".my-fretboard-js").fretboard({
+                    numFrets: 13,
+                    noteLetters: noteLettersSharps,
+                    noteClickingDisabled: true
+                });
+                api = $(".my-fretboard-js").data('api');
 
                 loadOptions();
             }
@@ -245,18 +251,15 @@ function loadOptions(){
 
 function onShowFretboardChange(show){
     if(show == "true" || show == true){
-        $$('#fretboard-container').show();
+        console.log('---SHOW---');
+//        $$('#fretboard-container').show();
+        $$('#fretboard-container').css('opacity', 1);
         storage.setItem('showFretboard', true);
-        if(!$(".my-fretboard-js").children().length){
-            $(".my-fretboard-js").fretboard({
-                numFrets: 13,
-                noteLetters: noteLettersSharps,
-                noteClickingDisabled: true
-            });
-            api = $(".my-fretboard-js").data('api');
-        }
+
     } else {
-        $$('#fretboard-container').hide();
+        console.log('---HIDE---');
+//        $$('#fretboard-container').hide();
+        $$('#fretboard-container').css('opacity', 0);
         storage.setItem('showFretboard', false);
     }
 

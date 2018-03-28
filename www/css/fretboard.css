@@ -38,6 +38,7 @@
        but will take into account margin */
     /*margin: 10px;*/
     box-sizing: content-box;
+    width: 100%;
 }
 
 .fretboard-container .string {
