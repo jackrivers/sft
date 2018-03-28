@@ -285,6 +285,8 @@ function toggleTraining(){
     }
 }
 
+var currentNote;
+
 function lottery(){
 
     if(training){
@@ -310,10 +312,11 @@ function lottery(){
         api.setClickedNotes(drawnNote);
 
         var clickedNotes = api.getClickedNotes();
-
         var note = clickedNotes[0].notes[0].letter;
 
-        if(nuturalNotes.indexOf(note) > -1){
+        if(nuturalNotes.indexOf(note) > -1 && compareWithCurrentNote(drawnNote)){
+
+            currentNote = drawnNote;
 
             $$('#sound').html(note);
             $$('#string').html(stringNumber + 1);
@@ -336,11 +339,14 @@ function lottery(){
         } else {
             lottery();
         }
-
-
     }
 }
 
+function compareWithCurrentNote(drawnNote){
+    if(currentNote === undefined ||  drawnNote[0].string != currentNote[0].string || drawnNote[0].notes[0].fret != currentNote[0].notes[0].fret)
+        return true;
+    return false;
+}
 
 
 Template7.registerHelper('if_compare', function (a, operator, b, options) { var match = false; if ( (operator === '==' && a == b) || (operator === '===' && a === b) || (operator === '!=' && a != b) || (operator === '>' && a > b) || (operator === '<' && a < b) || (operator === '>=' && a >= b) || (operator === '<=' && a <= b) ) { match = true; } if (match) return options.fn(this); else return options.inverse(this); });
