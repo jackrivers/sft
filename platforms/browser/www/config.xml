@@ -16,6 +16,9 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <splash src="splash.png" />
     <preference name="orientation" value="default" />
+    <preference name="SplashScreenDelay" value="1500" />
+    <preference name="SplashScreenSpinnerColor" value="white" />
     <preference name="DisallowOverscroll" value="true" />
 </widget>

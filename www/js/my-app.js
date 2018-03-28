@@ -207,7 +207,7 @@ var strings = [1,2,3,4,5,6];
 var positions = ['0-3','3-7','7-10','10-13'];
 
 var training = false;
-var t;
+var tr_interval, tr_timeout;
 var standardTuning = [{
     letter: "E",
     octave: 4
@@ -272,13 +272,14 @@ function toggleTraining(){
         $$('#start-text').hide();
         $$('.main-tiles div span.card-content').css('display', 'inline-block');
         lottery();
-        t = setInterval(function(){
+        tr_interval = setInterval(function(){
             lottery();
         }, 6000);
 //        $$(e.target).html('Stop');
     } else {
         window.plugins.insomnia.allowSleepAgain();
-        clearInterval(t);
+        clearInterval(tr_interval);
+        clearTimeout(tr_timeout);
         ToxProgress.reset();
 //        $$(e.target).html('Start');
     }
@@ -322,14 +323,14 @@ function lottery(){
             if(showEmptyStringNotes){
                 api.setClickedNotes(emptyStringsNotes);
             }
-            setTimeout(function(){
-
-                if(showEmptyStringNotes){
-                    api.setClickedNotes(drawnNote.concat(emptyStringsNotes));
-                } else {
-                    api.setClickedNotes(drawnNote);
+            tr_timeout = setTimeout(function(){
+                if(training){
+                    if(showEmptyStringNotes){
+                        api.setClickedNotes(drawnNote.concat(emptyStringsNotes));
+                    } else {
+                        api.setClickedNotes(drawnNote);
+                    }
                 }
-
             }, 5000);
 
         } else {
