@@ -313,13 +313,25 @@ function lottery(){
         var note = clickedNotes[0].notes[0].letter;
 
         if(nuturalNotes.indexOf(note) > -1){
-            if(showEmptyStringNotes){
-                api.setClickedNotes(drawnNote.concat(emptyStringsNotes));
-            }
 
             $$('#sound').html(note);
             $$('#string').html(stringNumber + 1);
             ToxProgress.animate();
+
+            api.clearClickedNotes();
+            if(showEmptyStringNotes){
+                api.setClickedNotes(emptyStringsNotes);
+            }
+            setTimeout(function(){
+
+                if(showEmptyStringNotes){
+                    api.setClickedNotes(drawnNote.concat(emptyStringsNotes));
+                } else {
+                    api.setClickedNotes(drawnNote);
+                }
+
+            }, 5000);
+
         } else {
             lottery();
         }
