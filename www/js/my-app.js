@@ -268,7 +268,7 @@ function toggleTraining(){
 
     training = !training;
     if(training){
-
+        window.plugins.insomnia.keepAwake();
         $$('#start-text').hide();
         $$('.main-tiles div span.card-content').css('display', 'inline-block');
         lottery();
@@ -277,6 +277,7 @@ function toggleTraining(){
         }, 6000);
 //        $$(e.target).html('Stop');
     } else {
+        window.plugins.insomnia.allowSleepAgain();
         clearInterval(t);
         ToxProgress.reset();
 //        $$(e.target).html('Start');
