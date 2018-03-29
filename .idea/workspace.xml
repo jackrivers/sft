@@ -26,16 +26,29 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="26" selection-start="5693" selection-end="5693" vertical-scroll-proportion="0.0" vertical-offset="1625" max-vertical-offset="2584">
-              <folding />
+            <state line="47" column="121" selection-start="2224" selection-end="2224" vertical-scroll-proportion="-15.307693" vertical-offset="401" max-vertical-offset="2584">
+              <folding>
+                <marker date="1522352400719" expanded="true" signature="2880:3347" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my-app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="tips.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/pages/tips.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="167" selection-start="3513" selection-end="3660" vertical-scroll-proportion="-23.73077" vertical-offset="437" max-vertical-offset="1326">
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my-app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="341" column="0" selection-start="8245" selection-end="8245" vertical-scroll-proportion="0.0" vertical-offset="5797" max-vertical-offset="6069">
+            <state line="124" column="0" selection-start="2614" selection-end="2614" vertical-scroll-proportion="0.2764505" vertical-offset="1865" max-vertical-offset="6052">
               <folding />
             </state>
           </provider>
@@ -50,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="53" selection-start="92" selection-end="92" vertical-scroll-proportion="0.018847007" vertical-offset="0" max-vertical-offset="1071">
+            <state line="1" column="53" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
@@ -141,10 +154,10 @@
         <option value="$PROJECT_DIR$/www/css/fretboard.css" />
         <option value="$PROJECT_DIR$/www/js/fretboard.js" />
         <option value="$PROJECT_DIR$/www/js/Insomnia.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/js/my-app.js" />
         <option value="$PROJECT_DIR$/www/css/styles.css" />
         <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/my-app.js" />
       </list>
     </option>
   </component>
@@ -227,15 +240,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -267,6 +272,10 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="options.lastSelected" value="editor.preferences.tabs" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -372,7 +381,9 @@
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="25" selection-start="3563" selection-end="3563" vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="3009">
-          <folding />
+          <folding>
+            <marker date="1522352400719" expanded="true" signature="2880:3347" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -408,7 +419,9 @@
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="38" selection-start="3964" selection-end="3964" vertical-scroll-proportion="0.0" vertical-offset="1203" max-vertical-offset="2992">
-          <folding />
+          <folding>
+            <marker date="1522352400719" expanded="true" signature="2880:3347" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -444,7 +457,9 @@
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="38" selection-start="3964" selection-end="3964" vertical-scroll-proportion="0.0" vertical-offset="1203" max-vertical-offset="2992">
-          <folding />
+          <folding>
+            <marker date="1522352400719" expanded="true" signature="2880:3347" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -480,7 +495,9 @@
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="38" selection-start="3964" selection-end="3964" vertical-scroll-proportion="0.0" vertical-offset="1203" max-vertical-offset="2992">
-          <folding />
+          <folding>
+            <marker date="1522352400719" expanded="true" signature="2880:3347" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -516,7 +533,9 @@
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="32" selection-start="3958" selection-end="3958" vertical-scroll-proportion="0.0" vertical-offset="744" max-vertical-offset="2992">
-          <folding />
+          <folding>
+            <marker date="1522352400719" expanded="true" signature="2880:3347" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -552,7 +571,9 @@
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="58" selection-start="3297" selection-end="3307" vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="2958">
-          <folding />
+          <folding>
+            <marker date="1522352400719" expanded="true" signature="2880:3347" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -595,21 +616,11 @@
         <state line="3" column="22484" selection-start="86666" selection-end="86666" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/tips.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="18" selection-start="3759" selection-end="3759" vertical-scroll-proportion="0.0" vertical-offset="625" max-vertical-offset="1326" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/tutorial/tutorial.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="48" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.0" vertical-offset="365" max-vertical-offset="1836">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="74" selection-start="1358" selection-end="1400" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/tutorial/first_frets.html">
@@ -633,13 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="26" selection-start="5693" selection-end="5693" vertical-scroll-proportion="0.0" vertical-offset="1625" max-vertical-offset="2584">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platforms/browser/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2057" />
@@ -657,13 +661,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="341" column="0" selection-start="8245" selection-end="8245" vertical-scroll-proportion="0.0" vertical-offset="5797" max-vertical-offset="6069">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="21" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.0" vertical-offset="1087" max-vertical-offset="2074">
@@ -675,7 +672,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="53" selection-start="92" selection-end="92" vertical-scroll-proportion="0.018847007" vertical-offset="0" max-vertical-offset="1071">
+        <state line="1" column="53" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="75" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.64041096" vertical-offset="0" max-vertical-offset="876">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/tips.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="167" selection-start="3513" selection-end="3660" vertical-scroll-proportion="-23.73077" vertical-offset="437" max-vertical-offset="1326">
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="121" selection-start="2224" selection-end="2224" vertical-scroll-proportion="-15.307693" vertical-offset="401" max-vertical-offset="2584">
+          <folding>
+            <marker date="1522352400719" expanded="true" signature="2880:3347" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="0" selection-start="2614" selection-end="2614" vertical-scroll-proportion="0.2764505" vertical-offset="1865" max-vertical-offset="6052">
           <folding />
         </state>
       </provider>

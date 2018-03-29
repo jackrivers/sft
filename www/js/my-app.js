@@ -122,7 +122,6 @@ var app = new Framework7({
 
             if(page.name == 'home'){
 
-
                 frets = dFrets;
                 showEmptyStringNotes = false;
                 $$('#mainToggle').click(function(e){
