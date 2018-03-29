@@ -76,6 +76,23 @@ div[class*="col"] {
     cursor: pointer;
 }
 
+@media all and (orientation:portrait) {
+    .main-tiles div.card {
+        font-size: 15vw;
+        width: 60vw;
+        height: 60vw;
+        line-height: 60vw;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    .main-tiles div.card {
+        font-size: 12vh;
+        width: 50vh;
+        height: 50vh;
+        line-height: 50vh;
+    }
+}
 .main-tiles div span.card-content{
     line-height: 1;
     vertical-align: middle;
