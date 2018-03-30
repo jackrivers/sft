@@ -9,6 +9,9 @@
     url(../icons/MaterialIcons-Regular.woff) format('woff'),
     url(../icons/MaterialIcons-Regular.ttf) format('truetype');
 }
+.md .checkbox i, .md .icon-checkbox {
+    border: 1px solid #ffffff;
+}
 
 .material-icons {
     font-family: 'Material Icons';
@@ -113,4 +116,21 @@ div[class*="col"] {
 button#mainToggle {
     background-color: #2196f3;
     /*background-color: #1976d2;*/
+}
+
+.card-blue{
+    background-color: #2196f3;
+    color: #fff;
+    width: 100%;
+}
+.card-blue .card-content{
+    text-align: justify;
+}
+.card-blue .card-footer{
+    text-align: right;
+    color: #fff;
+}
+
+.card-blue a{
+    color: #fff;
 }

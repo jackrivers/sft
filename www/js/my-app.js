@@ -89,9 +89,9 @@ var app = new Framework7({
             url: './pages/lessons/lessons.html',
             routes: [
                 {
-                    path: 'learn_notes/',
-                    name: 'learn_notes',
-                    url: './pages/lessons/learn_notes.html'
+                    path: 'musical_alphabet/',
+                    name: 'musical_alphabet',
+                    url: './pages/lessons/musical_alphabet.html'
                 }, {
                     path: 'first_frets/',
                     name: 'first_frets',
@@ -162,6 +162,89 @@ var app = new Framework7({
                     });
                     api = $(".my-fretboard-js").data('api');
                     api.setClickedNotes(emptyStringsNotes);
+
+                    break;
+                case 'musical_alphabet':
+
+//                    frets = [1,2,3];
+//                    showEmptyStringNotes = true;
+//
+
+                    var aString = [ {
+                        string: {
+                            letter: "A",
+                            octave: 2
+                        }, notes: [{
+                            fret: 0,
+                            cssClass: "small"
+                        }]
+                    },{
+                        string: {
+                            letter: "A",
+                            octave: 2
+                        }, notes: [{
+                            fret: 2,
+                            cssClass: "small"
+                        }]
+                    },{
+                        string: {
+                            letter: "A",
+                            octave: 2
+                        }, notes: [{
+                            fret: 3,
+                            cssClass: "small"
+                        }]
+                    },{
+                        string: {
+                            letter: "A",
+                            octave: 2
+                        }, notes: [{
+                            fret: 5,
+                            cssClass: "small"
+                        }]
+                    },{
+                        string: {
+                            letter: "A",
+                            octave: 2
+                        }, notes: [{
+                            fret: 7,
+                            cssClass: "small"
+                        }]
+                    },{
+                        string: {
+                            letter: "A",
+                            octave: 2
+                        }, notes: [{
+                            fret: 8,
+                            cssClass: "small"
+                        }]
+                    },{
+                        string: {
+                            letter: "A",
+                            octave: 2
+                        }, notes: [{
+                            fret: 10,
+                            cssClass: "small"
+                        }]
+                    },{
+                        string: {
+                            letter: "A",
+                            octave: 2
+                        }, notes: [{
+                            fret: 12,
+                            cssClass: "small"
+                        }]
+                    } ];
+
+
+                    $(".my-fretboard-js-a").fretboard({
+                        numFrets: 13,
+                        noteLetters: noteLettersSharps,
+                        noteClickingDisabled: true,
+                        isChordMode: false
+                    });
+                    api = $(".my-fretboard-js-a").data('api');
+                    api.setClickedNotes(aString);
 
                     break;
                 default:
