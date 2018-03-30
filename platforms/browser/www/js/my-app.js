@@ -84,25 +84,25 @@ var app = new Framework7({
             url: './pages/tips.html'
         },
         {
-            path: '/tutorial/',
-            name: 'tutorial',
-            url: './pages/tutorial/tutorial.html',
+            path: '/lessons/',
+            name: 'lessons',
+            url: './pages/lessons/lessons.html',
             routes: [
                 {
                     path: 'learn_notes/',
                     name: 'learn_notes',
-                    url: './pages/tutorial/learn_notes.html'
+                    url: './pages/lessons/learn_notes.html'
                 }, {
                     path: 'first_frets/',
                     name: 'first_frets',
-                    url: './pages/tutorial/first_frets.html'
+                    url: './pages/lessons/first_frets.html'
                 }
 
             ]
         }
 //        {
 //            path: '/learn_notes/',
-//            url: './pages/tutorial/learn_notes.html'
+//            url: './pages/lessons/learn_notes.html'
 //        }
     ],
     on: {
