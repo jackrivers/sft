@@ -10,7 +10,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
     <!-- Required meta tags-->
     <meta charset="utf-8">
@@ -58,19 +58,7 @@
                 </li>
 
             </ul>
-            <ul>
-                <li>
-                    <div class="row">
-                        <script id="trainer-options" type="text/template7">
-                            <div class="trainer-options">
-                                <!--<p>Show fretboard <label class="checkbox"><input type="checkbox" name="show-fretboard" {{#if showFretboard }}checked{{/if}}><i class="icon-checkbox"></i></label></p>-->
-                                <p>Show fretboard <label class="checkbox"><input type="checkbox" name="show-fretboard" {{#if_compare showFretboard "==" 'true'}} checked {{/if_compare}}><i class="icon-checkbox"></i></label></p>
-                            </div>
-                        </script>
-                        <div id="trainer-options-container"></div>
-                    </div>
-                </li>
-            </ul>
+
         </div>
     </div>
 
@@ -125,23 +113,24 @@
                     <div class="row">
                         <div class="col">
 
-
-
-
+                            <a href="/options/" class="item-link button button-small panel-close">Options</a>
                         </div>
                     </div>
-                    <img width="80%" src="Logo-big.png">
+                    <img style="display: none;" width="80%" src="Logo-big.png">
                 </div>
             </div>
         </div>
     </div>
 </div>
-    <script type="text/javascript" src="js/jQuery.js"></script>
+
+    <script type="text/javascript" src="lib/jQuery.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
 
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-    <script type="text/javascript" src="js/tox-progress.js"></script>
-    <script type="text/javascript" src="js/fretboard.js"></script>
+    <script type="text/javascript" src="lib/tox-progress.js"></script>
+    <script type="text/javascript" src="lib/fretboard.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/router.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
 </body>
 

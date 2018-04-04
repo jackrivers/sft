@@ -40,17 +40,19 @@ ToxProgressBar.prototype.reset = function(){
 
 var t1,t2,t3;
 
-ToxProgressBar.prototype.animate = function () {
+ToxProgressBar.prototype.animate = function (speed) {
 
     this.reset();
     var element = this.element;
-    var speed = this.speed;
+//    var speed = this.speed;
     var progress = this.progress;
 
     clearTimeout(t1);
     clearTimeout(t2);
     clearTimeout(t3);
 
+    console.log('speed');
+    console.log(speed);
     element.querySelector('.radial-mask-1').style.transition = 'transform ' + (speed / 2) + 'ms ease-in';
     element.querySelector('.radial-inner').style.transition = 'background-color ' + (400) + 'ms ease-in';
     element.querySelector('.radial-mask-2').style.transition = 'transform ' + (speed * ((progress - 50) / 100)) + 'ms ease-out';
@@ -92,11 +94,11 @@ var ToxProgress = {
             toxProgressBar.create();
         });
     },
-    animate: function () {
+    animate: function (speed) {
         var toxProgressBars = this.toxProgressBars;
 
         toxProgressBars.forEach(function (toxProgressBar) {
-            toxProgressBar.animate();
+            toxProgressBar.animate(speed);
         });
     },
     reset: function () {

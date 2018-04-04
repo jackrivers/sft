@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="rocks.guitarlearning.sft" version="1.0.14" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="rocks.guitarlearning.sft" version="1.0.15" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Simple Fretboard Trainer</name>
     <description>
         Simple and free app that will help you memorize all of the notes on your fretboard.
@@ -35,6 +35,10 @@
         <splash platform="android" qualifier="land-xxhdpi" src="res/screen/android/android_1600x960.png" />
         <splash platform="android" qualifier="land-xxxhdpi" src="res/screen/android/android_1920x1280.png" />
 
+        <splash src="splash.png" />
+        <preference name="SplashScreenDelay" value="1500" />
+        <preference name="SplashScreenSpinnerColor" value="white" />
+
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -42,9 +46,7 @@
         <preference name="BackupWebStorage" value="none" />
     </platform>
 
-    <splash src="splash.png" />
-    <preference name="SplashScreenDelay" value="1500" />
-    <preference name="SplashScreenSpinnerColor" value="white" />
+
 
 
     <preference name="DisallowOverscroll" value="true" />

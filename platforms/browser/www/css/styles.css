@@ -134,3 +134,11 @@ button#mainToggle {
 .card-blue a{
     color: #fff;
 }
+
+.md body .page.options{
+    color: #fff;
+}
+
+.md body .page.options .list .item-after{
+    color: #fff;
+}

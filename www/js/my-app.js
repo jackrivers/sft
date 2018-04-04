@@ -1,61 +1,6 @@
+//fretboard api
 var api;
-var noteLettersSharps = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
-var frets, dFrets = [1,2,3,4,5,6,7,8,9,10,11,12];
-var nuturalNotes = ["A", "B", "C", "D", "E", "F", "G"];
-var showEmptyStringNotes = false;
-var emptyStringsNotes = [{
-    string: {
-        letter: "E",
-        octave: 4
-    }, notes: [{
-        fret: 0,
-        cssClass: "red"
-    }]
-}, {
-    string: {
-        letter: "B",
-        octave: 3
-    }, notes: [{
-        fret: 0,
-        cssClass: "red"
-    }]
-}, {
-    string: {
-        letter: "G",
-        octave: 3
-    }, notes: [{
-        fret: 0,
-        cssClass: "red"
-    }]
-}, {
-    string: {
-        letter: "D",
-        octave: 3
-    }, notes: [{
-        fret: 0,
-        cssClass: "red"
-    }]
-}, {
-    string: {
-        letter: "A",
-        octave: 2
-    }, notes: [{
-        fret: 0,
-        cssClass: "red"
-    }]
-}, {
-    string: {
-        letter: "E",
-        octave: 2
-    }, notes: [{
-        fret: 0,
-        cssClass: "red"
-    }]
-}];
 
-var defaultTrainerOptions = [{
-    showFretboard : true
-}];
 
 var app = new Framework7({
     // App root element
@@ -69,49 +14,11 @@ var app = new Framework7({
         swipe: 'left'
     },
     // Add default routes
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            url: 'index.html'
-        },
-        {
-            path: '/about/',
-            url: './pages/about.html'
-        },
-        {
-            path: '/tips/',
-            url: './pages/tips.html'
-        },
-        {
-            path: '/lessons/',
-            name: 'lessons',
-            url: './pages/lessons/lessons.html',
-            routes: [
-                {
-                    path: 'musical_alphabet/',
-                    name: 'musical_alphabet',
-                    url: './pages/lessons/musical_alphabet.html'
-                }, {
-                    path: 'first_frets/',
-                    name: 'first_frets',
-                    url: './pages/lessons/first_frets.html'
-                }
-
-            ]
-        }
-//        {
-//            path: '/learn_notes/',
-//            url: './pages/lessons/learn_notes.html'
-//        }
-    ],
+    routes: routes,
     on: {
         init: function () {
             console.log('App initialized');
-
             onDeviceReady();
-
-
         },
         pageInit: function (page) {
             console.log(page.route.name + ' page initialized');
@@ -121,137 +28,25 @@ var app = new Framework7({
                 toggleTraining();
 
             if(page.name == 'home'){
-
-                frets = dFrets;
-                showEmptyStringNotes = false;
-                $$('#mainToggle').click(function(e){
-                    toggleTraining();
-                });
-                ToxProgress.create();
-
-                $(".my-fretboard-js").fretboard({
-                    numFrets: 13,
-                    noteLetters: noteLettersSharps,
-                    noteClickingDisabled: true
-                });
-                api = $(".my-fretboard-js").data('api');
-
-                loadOptions();
+                onHomePageInit();
             }
 
             switch(page.route.name) {
-                case 'home':
+                case 'options':
 
+                    onOptionsPageInit();
                     break;
                 case 'first_frets':
 
-                    frets = [1,2,3];
-                    showEmptyStringNotes = true;
-                    $$('#mainToggleFirstFrets').click(function(e){
-                        toggleTraining();
-                    });
-                    ToxProgress.create();
-
-
-
-                    $(".my-fretboard-js").fretboard({
-                        numFrets: 4,
-                        noteLetters: noteLettersSharps,
-                        noteClickingDisabled: true,
-                        isChordMode: false
-                    });
-                    api = $(".my-fretboard-js").data('api');
-                    api.setClickedNotes(emptyStringsNotes);
-
+                   onFristFrestsPageInit();
                     break;
                 case 'musical_alphabet':
 
-//                    frets = [1,2,3];
-//                    showEmptyStringNotes = true;
-//
-
-                    var aString = [ {
-                        string: {
-                            letter: "A",
-                            octave: 2
-                        }, notes: [{
-                            fret: 0,
-                            cssClass: "small"
-                        }]
-                    },{
-                        string: {
-                            letter: "A",
-                            octave: 2
-                        }, notes: [{
-                            fret: 2,
-                            cssClass: "small"
-                        }]
-                    },{
-                        string: {
-                            letter: "A",
-                            octave: 2
-                        }, notes: [{
-                            fret: 3,
-                            cssClass: "small"
-                        }]
-                    },{
-                        string: {
-                            letter: "A",
-                            octave: 2
-                        }, notes: [{
-                            fret: 5,
-                            cssClass: "small"
-                        }]
-                    },{
-                        string: {
-                            letter: "A",
-                            octave: 2
-                        }, notes: [{
-                            fret: 7,
-                            cssClass: "small"
-                        }]
-                    },{
-                        string: {
-                            letter: "A",
-                            octave: 2
-                        }, notes: [{
-                            fret: 8,
-                            cssClass: "small"
-                        }]
-                    },{
-                        string: {
-                            letter: "A",
-                            octave: 2
-                        }, notes: [{
-                            fret: 10,
-                            cssClass: "small"
-                        }]
-                    },{
-                        string: {
-                            letter: "A",
-                            octave: 2
-                        }, notes: [{
-                            fret: 12,
-                            cssClass: "small"
-                        }]
-                    } ];
-
-
-                    $(".my-fretboard-js-a").fretboard({
-                        numFrets: 13,
-                        noteLetters: noteLettersSharps,
-                        noteClickingDisabled: true,
-                        isChordMode: false
-                    });
-                    api = $(".my-fretboard-js-a").data('api');
-                    api.setClickedNotes(aString);
-
+                    onMusicalAlphabetPageInit();
                     break;
                 default:
 
             }
-
-
         }
     }
     // ... other parameters
@@ -261,74 +56,92 @@ var mainView = app.views.create('.view-main');
 
 var $$ = Dom7;
 
-var storage;
+
+//var userTrainerOptions;
 
 function onDeviceReady() {
-    storage = window.localStorage;
-    var showFretboard = storage.getItem('showFretboard'); // Pass a key name to get its value.
-    if(showFretboard === null)
-        storage.setItem('showFretboard', true); // Pass a key name and its value to add or update that key.
-//    storage.removeItem(key) // Pass a key name to remove that key from storage.
-//    showFretboard = (showFretboard == 'true');
+    console.log('--- onDeviceReady ---');
 }
 
+function onHomePageInit(){
+    console.log('--- onHomePageInit ---');
+    frets = dFrets;
+    showEmptyStringNotes = false;
+    $$('#mainToggle').click(function(e){
+        toggleTraining();
+    });
+    ToxProgress.create();
 
+    $(".my-fretboard-js").fretboard({
+        numFrets: 13,
+        noteLetters: noteLettersSharps,
+        noteClickingDisabled: true
+    });
+    api = $(".my-fretboard-js").data('api');
 
+    loadOptions();
+}
 
+function onOptionsPageInit(){
+    console.log('--- onOptionsPageInit ---');
 
+    loadOptions();
+}
 
+function onFristFrestsPageInit(){
+    frets = [1,2,3];
+    showEmptyStringNotes = true;
+    $$('#mainToggleFirstFrets').click(function(e){
+        toggleTraining();
+    });
+    ToxProgress.create();
 
+    $(".my-fretboard-js").fretboard({
+        numFrets: 4,
+        noteLetters: noteLettersSharps,
+        noteClickingDisabled: true,
+        isChordMode: false
+    });
+    api = $(".my-fretboard-js").data('api');
+    api.setClickedNotes(emptyStringsNotes);
+}
 
+function onMusicalAlphabetPageInit(){
 
-
+    $(".my-fretboard-js-a").fretboard({
+        numFrets: 13,
+        noteLetters: noteLettersSharps,
+        noteClickingDisabled: true,
+        isChordMode: false
+    });
+    api = $(".my-fretboard-js-a").data('api');
+    api.setClickedNotes(aString);
+}
 //Views
 
-//Training
-var sounds = ['A','B','C','D','E','F','G','A&#9837;','B&#9837;','C&#9837;','D&#9837;','E&#9837;','F&#9837;','G&#9837;','A&#9839;','B&#9839;','C&#9839;','D&#9839;','E&#9839;','F&#9839;','G&#9839;'];
-var strings = [1,2,3,4,5,6];
-var positions = ['0-3','3-7','7-10','10-13'];
 
-var training = false;
-var tr_interval, tr_timeout;
-var standardTuning = [{
-    letter: "E",
-    octave: 4
-}, {
-    letter: "B",
-    octave: 3
-}, {
-    letter: "G",
-    octave: 3
-}, {
-    letter: "D",
-    octave: 3
-}, {
-    letter: "A",
-    octave: 2
-}, {
-    letter: "E",
-    octave: 2
-}];
+
+
+//Training
 
 
 function loadOptions(){
+    console.log('--- loadOptions ---');
 
-    var options = {
-        showFretboard: storage.getItem('showFretboard'),
-        lastName: 'Doe'
-    };
-
-    var template = $$('#trainer-options').html();
-    var compiledTemplate = Template7.compile(template);
-    var html = compiledTemplate(options);
-
-    $$('#trainer-options-container').html(html);
-
-    onShowFretboardChange(options.showFretboard);
+    console.log('userTrainerOptions');
+    console.log(userTrainerOptions);
+    onShowFretboardChange(userTrainerOptions.showFretboard);
     $$('input[name="show-fretboard"]').on('change', function () {
         onShowFretboardChange(this.checked);
+        console.log('userTrainerOptions');
+        console.log(userTrainerOptions);
     });
 
+    $$('[name=questionTime]').on('change', function(val){
+        userTrainerOptions.questionTime = val.target.value;
+        storage.setItem('questionTime', val.target.value);
+        restartTraining();
+    });
 }
 
 function onShowFretboardChange(show){
@@ -337,34 +150,53 @@ function onShowFretboardChange(show){
 //        $$('#fretboard-container').show();
         $$('#fretboard-container').css('opacity', 1);
         storage.setItem('showFretboard', true);
+        userTrainerOptions.showFretboard = "true";
 
     } else {
         console.log('---HIDE---');
 //        $$('#fretboard-container').hide();
         $$('#fretboard-container').css('opacity', 0);
         storage.setItem('showFretboard', false);
+        userTrainerOptions.showFretboard = "false";
     }
 
 }
 function toggleTraining(){
-
     training = !training;
     if(training){
-        window.plugins.insomnia.keepAwake();
-        $$('#start-text').hide();
-        $$('.main-tiles div span.card-content').css('display', 'inline-block');
-        lottery();
-        tr_interval = setInterval(function(){
-            lottery();
-        }, 6000);
-//        $$(e.target).html('Stop');
+        startTraining();
     } else {
-        window.plugins.insomnia.allowSleepAgain();
-        clearInterval(tr_interval);
-        clearTimeout(tr_timeout);
-        ToxProgress.reset();
-//        $$(e.target).html('Start');
+        stopTraining();
     }
+}
+function restartTraining(){
+    if(training){
+        stopTraining();
+        startTraining();
+    }
+}
+
+var tr_interval, tr_timeout;
+function startTraining(){
+
+    window.plugins.insomnia.keepAwake();
+    $$('#start-text').hide();
+    $$('.main-tiles div span.card-content').css('display', 'inline-block');
+    lottery();
+    tr_interval = setInterval(function(){
+        lottery();
+//        restartTraining();
+    }, userTrainerOptions.questionTime*1000);
+
+//        $$(e.target).html('Stop');
+}
+
+function stopTraining(){
+    window.plugins.insomnia.allowSleepAgain();
+    clearInterval(tr_interval);
+    clearTimeout(tr_timeout);
+    ToxProgress.reset();
+//        $$(e.target).html('Start');
 }
 
 var currentNote;
@@ -402,7 +234,10 @@ function lottery(){
 
             $$('#sound').html(note);
             $$('#string').html(stringNumber + 1);
-            ToxProgress.animate();
+
+            console.log('userTrainerOptions.questionTime');
+            console.log(userTrainerOptions.questionTime);
+            ToxProgress.animate(userTrainerOptions.questionTime*1000);
 
             api.clearClickedNotes();
             if(showEmptyStringNotes){
@@ -416,7 +251,7 @@ function lottery(){
                         api.setClickedNotes(drawnNote);
                     }
                 }
-            }, 5000);
+            }, (userTrainerOptions.questionTime - 1)*1000);
 
         } else {
             lottery();
@@ -431,4 +266,6 @@ function compareWithCurrentNote(drawnNote){
 }
 
 
-Template7.registerHelper('if_compare', function (a, operator, b, options) { var match = false; if ( (operator === '==' && a == b) || (operator === '===' && a === b) || (operator === '!=' && a != b) || (operator === '>' && a > b) || (operator === '<' && a < b) || (operator === '>=' && a >= b) || (operator === '<=' && a <= b) ) { match = true; } if (match) return options.fn(this); else return options.inverse(this); });
+//helpers
+Template7.registerHelper('if_compare', function (a, operator, b, options) {  var match = false; if ( (operator === '==' && a == b) || (operator === '===' && a === b) || (operator === '!=' && a != b) || (operator === '>' && a > b) || (operator === '<' && a < b) || (operator === '>=' && a >= b) || (operator === '<=' && a <= b) ) { match = true; } if (match) return options.fn(this); else return options.inverse(this); });
+

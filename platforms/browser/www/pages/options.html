@@ -1,0 +1,60 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax. -->
+
+<div class="pages">
+    <div data-page="options" class="page options">
+
+        <!-- Top Navbar -->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link panel-open"><i class="material-icons">menu</i></a>
+                </div>
+                <div class="title">Trainer Options</div>
+            </div>
+        </div>
+
+        <div class="page-content" style="text-align: center;">
+            <div class="block">
+                <div class="list inset no-hairlines no-harilines-between" style="text-align: left;">
+                    <ul>
+                        <li>
+                            Show fretboard <label class="checkbox"><input type="checkbox" name="show-fretboard" {{#if_compare showFretboard "==" 'true'}} checked {{/if_compare}}><i class="icon-checkbox"></i></label>
+                        </li>
+                        <li>
+                            <a class="item-link smart-select smart-select-init" data-open-in="popover" data-close-on-select="true">
+                                <select name="questionTime">
+                                    <option value="2" {{#if_compare questionTime "==" 2}} selected {{/if_compare}}>2</option>
+                                    <option value="4" {{#if_compare questionTime "==" 4}} selected {{/if_compare}}>4</option>
+                                    <option value="6" {{#if_compare questionTime "==" 6}} selected {{/if_compare}}>6</option>
+                                    <option value="8" {{#if_compare questionTime "==" 8}} selected {{/if_compare}}>8</option>
+                                    <option value="10" {{#if_compare questionTime "==" 10}} selected {{/if_compare}}>10</option>
+                                    <option value="12" {{#if_compare questionTime "==" 12}} selected {{/if_compare}}>12</option>
+                                    <option value="14" {{#if_compare questionTime "==" 14}} selected {{/if_compare}}>14</option>
+                                </select>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Question Time</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+
+                        </li>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="row" style="color: #fff;">
+                    <a href="/" data-force="true" data-ignore-cache="true" class="back button button-fill button-raised" style="margin: 20px auto;">Back</a>
+                </div>
+
+
+                <img width="80%" src="./Logo-big.png">
+            </div>
+        </div>
+
+    </div>
+</div>
